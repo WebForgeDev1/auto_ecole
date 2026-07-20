@@ -8,7 +8,9 @@ const updateHeader = () => {
   header.classList.toggle("is-scrolled", header.classList.contains("inner-header") || window.scrollY > 12);
 };
 
-updateHeader();
+// Defer the first call: reading window.scrollY synchronously at parse time,
+// while the page is still settling layout, is what shows up as "forced reflow".
+requestAnimationFrame(updateHeader);
 window.addEventListener("scroll", updateHeader, { passive: true });
 
 if (navToggle && nav) {
