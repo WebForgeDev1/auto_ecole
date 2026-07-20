@@ -154,6 +154,9 @@ document.querySelectorAll(".carousel-wrap").forEach((wrap) => {
     const { cardWidth, step } = getSpotlightMetrics();
     track.style.setProperty("--spotlight-card-w", cardWidth + "px");
 
+    // Batch all writes first, then a single forced-reflow read, then all
+    // "re-enable transition" writes — avoids one write/read/write cycle per
+    // card (layout thrashing), which is what triggers "forced reflow" warnings.
     cards.forEach((card, i) => {
       const slot = slotFor(i, focusIndex);
       const isFocus = slot === 1;
@@ -164,11 +167,12 @@ document.querySelectorAll(".carousel-wrap").forEach((wrap) => {
       card.classList.toggle("is-side", !isFocus);
       card.classList.remove("is-focus-static");
       card.setAttribute("aria-current", isFocus ? "true" : "false");
-      if (!animate) {
-        void card.offsetWidth;
-        card.style.transition = "";
-      }
     });
+
+    if (!animate) {
+      void track.offsetWidth; // single forced reflow for the whole batch
+      cards.forEach((card) => { card.style.transition = ""; });
+    }
 
     const tallest = Math.max.apply(null, cards.map((c) => c.getBoundingClientRect().height));
     track.style.height = tallest * 1.1 + "px";

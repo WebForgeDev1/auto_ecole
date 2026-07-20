@@ -13,6 +13,9 @@
   <meta property="og:image" content="https://DOMAINE/assets/img/og-image.jpg"><!-- TODO: fournir une image de partage 1200x630 (ex: photo équipe + voiture) -->
   <meta property="og:url" content="https://DOMAINE/">
   <meta property="og:type" content="website">
+  <link rel="preload" as="font" href="assets/fonts/archivo-var.woff2" type="font/woff2" crossorigin>
+  <link rel="preload" as="font" href="assets/fonts/bigshoulders-var.woff2" type="font/woff2" crossorigin>
+  <link rel="preload" as="image" href="assets/img/team-hero.webp" imagesrcset="assets/img/team-hero-640.webp 640w, assets/img/team-hero.webp 1086w" imagesizes="100vw" fetchpriority="high">
   <link rel="stylesheet" href="assets/css/styles.css">
   <script type="application/ld+json">
   {
@@ -161,7 +164,7 @@
 
   <main id="main">
     <section class="hero" id="accueil">
-      <div class="hero-media" aria-hidden="true"><picture><source srcset="assets/img/team-hero.webp" type="image/webp"><img src="assets/img/team-hero.png" alt="" width="1086" height="1448" decoding="async" style="object-position: center 15%;"></picture></div>
+      <div class="hero-media" aria-hidden="true"><picture><source srcset="assets/img/team-hero-640.webp 640w, assets/img/team-hero.webp 1086w" sizes="100vw" type="image/webp"><img src="assets/img/team-hero.png" alt="" width="1086" height="1448" decoding="async" fetchpriority="high" style="object-position: center 15%;"></picture></div>
       <div class="hero-overlay"></div>
       <div class="hero-content">
         <p class="eyebrow">Hk Conduite · Le Mans</p>
