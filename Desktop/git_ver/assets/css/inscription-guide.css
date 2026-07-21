@@ -1,0 +1,269 @@
+.signup-guide {
+  max-width: 96rem;
+  margin: 0 auto;
+  padding: clamp(3rem, 7vw, 5.5rem) clamp(1.25rem, 4vw, 3rem);
+  display: grid;
+  grid-template-columns: minmax(300px, 0.72fr) minmax(560px, 1.28fr);
+  gap: clamp(2.5rem, 7vw, 6rem);
+  align-items: center;
+}
+
+.signup-guide-copy h2 {
+  max-width: 34rem;
+  font-size: clamp(2rem, 4.5vw, 3.2rem);
+}
+
+.signup-guide-copy > p:not(.eyebrow) {
+  max-width: 34rem;
+  margin-top: 1rem;
+  color: var(--ink-text-dim);
+}
+
+.signup-guide-steps {
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0 0;
+  display: grid;
+  gap: 0.85rem;
+}
+
+.signup-guide-steps li {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.1rem;
+  border: 1px solid var(--line-light);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.65);
+}
+
+.signup-guide-steps li > span {
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  flex: none;
+  border-radius: 50%;
+  background: #2563eb;
+  color: #fff;
+  font-weight: 700;
+}
+
+.signup-guide-steps strong,
+.signup-guide-steps small { display: block; }
+.signup-guide-steps strong { font-size: 0.92rem; }
+.signup-guide-steps small { margin-top: 0.15rem; color: var(--ink-text-dim); }
+
+.signup-demo {
+  display: grid;
+  place-items: center;
+  min-height: 565px;
+  padding: clamp(1rem, 2.5vw, 2rem);
+  border-radius: 32px;
+  background: radial-gradient(circle at 25% 20%, rgba(34, 197, 94, 0.22), transparent 38%),
+              linear-gradient(145deg, #173f9f, #0f172a 72%);
+  overflow: hidden;
+}
+
+.signup-phone {
+  position: relative;
+  width: min(760px, 100%);
+  height: 470px;
+  border: 1px solid #d8e1ed;
+  border-radius: 18px;
+  overflow: hidden;
+  background: #f8fafc;
+  box-shadow: 0 28px 55px rgba(15, 23, 42, 0.3);
+}
+
+.signup-phone-bar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 68%;
+  height: 68px;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  background: #fff;
+  border-bottom: 1px solid var(--line-light);
+  font-size: 0.76rem;
+  font-weight: 600;
+}
+.signup-phone-bar strong { font-size: 1rem; color: var(--ink-text); }
+.signup-phone-bar span { color: #64748b; font-size: 0.62rem; }
+
+.signup-calendly-info {
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 32%;
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border-right: 1px solid #d8e1ed;
+  background: #fff;
+  z-index: 3;
+}
+.signup-calendly-info img { width: 58px; height: 58px; object-fit: contain; border-radius: 10px; }
+.signup-calendly-info > span { margin-top: 1.5rem; color: #64748b; font-size: 0.7rem; font-weight: 600; }
+.signup-calendly-info > strong { margin-top: 0.35rem; color: var(--ink-text); font-size: 1.15rem; line-height: 1.18; }
+.signup-calendly-info > small { margin-top: 1.15rem; color: #475569; font-size: 0.68rem; line-height: 1.45; }
+
+.signup-screen {
+  position: absolute;
+  inset: 68px 0 0 32%;
+  padding: 26px 32px;
+  display: flex;
+  flex-direction: column;
+  background: #f8fafc;
+  opacity: 0;
+  transform: translateX(28px);
+  animation: signup-screen-cycle 16s infinite ease-in-out;
+}
+
+.signup-screen-two { animation-delay: 4s; }
+.signup-screen-three { animation-delay: 8s; }
+.signup-screen-four { animation-delay: 12s; }
+
+.signup-progress {
+  color: #2563eb;
+  font-size: 0.72rem;
+  font-weight: 600;
+}
+
+.signup-screen h3 {
+  margin: 0.5rem 0 1rem;
+  font-size: 1.15rem;
+}
+
+.signup-screen button,
+.signup-screen label {
+  width: 100%;
+  min-height: 52px;
+  margin-bottom: 10px;
+  padding: 0.8rem 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  border: 1px solid var(--line-light);
+  border-radius: 13px;
+  background: #fff;
+  color: var(--ink-text);
+  font: inherit;
+  font-size: 0.82rem;
+  text-align: left;
+}
+
+.signup-screen button .icon { color: #2563eb; font-size: 1.25rem; }
+.signup-screen button.is-selected { border-color: #2563eb; box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.12); }
+.signup-screen label { display: block; color: var(--ink-text-dim); font-size: 0.68rem; }
+.signup-screen label span { display: block; margin-top: 0.2rem; color: var(--ink-text); font-size: 0.8rem; font-weight: 500; }
+
+.signup-calendar { padding: 0.9rem; border: 1px solid var(--line-light); border-radius: 16px; background: #fff; }
+.signup-calendar-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.9rem; color: #2563eb; }
+.signup-calendar-head strong { color: var(--ink-text); font-size: 0.8rem; text-transform: capitalize; }
+.signup-calendar-days { display: grid; grid-template-columns: repeat(7, 1fr); gap: 0.5rem; text-align: center; }
+.signup-calendar-days b { color: var(--ink-text-dim); font-size: 0.58rem; }
+.signup-calendar-days i { min-height: 28px; display: grid; place-items: center; border-radius: 50%; color: var(--ink-text); font-size: 0.7rem; font-style: normal; }
+.signup-calendar-days i.is-available { background: #eef4ff; color: #2563eb; }
+.signup-calendar-days i.is-selected { background: #2563eb; color: #fff; }
+.signup-hint { margin-top: 1rem; color: var(--ink-text-dim); font-size: 0.7rem; text-align: center; }
+.signup-date { margin: -0.75rem 0 1rem; color: var(--ink-text-dim); font-size: 0.78rem; }
+.signup-fields { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.signup-choice { display: flex; align-items: center; gap: 0.6rem; margin-top: 2px; padding: 0.7rem 0.8rem; border-radius: 11px; background: #fff; border: 1px solid var(--line-light); font-size: 0.72rem; }
+.signup-checkbox { width: 20px; height: 20px; display: grid; place-items: center; border-radius: 5px; background: #2563eb; color: #fff; font-size: 0.7rem; font-weight: 700; }
+
+.signup-next {
+  min-height: 48px;
+  margin-top: auto;
+  padding: 0.8rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  border-radius: 12px;
+  background: var(--accent);
+  color: #0f172a;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.signup-success {
+  width: 72px;
+  height: 72px;
+  margin-top: 2.2rem;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: rgba(34, 197, 94, 0.14);
+  color: var(--accent-strong);
+}
+
+.signup-success .icon { width: 38px; height: 38px; }
+.signup-screen-three h3 { margin-bottom: 0.75rem; }
+.signup-summary { width: 100%; margin-top: 1.5rem; padding: 1rem; border-radius: 14px; background: #fff; border: 1px solid var(--line-light); }
+.signup-summary strong, .signup-summary span { display: block; }
+.signup-summary span { margin-top: 0.35rem; color: var(--ink-text-dim); font-size: 0.74rem; }
+
+.signup-phone-home {
+  display: none;
+}
+
+@keyframes signup-screen-cycle {
+  0%, 21% { opacity: 1; transform: translateX(0); }
+  25%, 96% { opacity: 0; transform: translateX(-28px); }
+  97%, 100% { opacity: 0; transform: translateX(28px); }
+}
+
+@media (max-width: 900px) {
+  .signup-guide { grid-template-columns: 1fr; }
+  .signup-guide-copy { text-align: center; }
+  .signup-guide-copy h2,
+  .signup-guide-copy > p:not(.eyebrow) { margin-left: auto; margin-right: auto; }
+  .signup-guide-steps { max-width: 38rem; margin-left: auto; margin-right: auto; text-align: left; }
+  .signup-demo { min-height: 555px; }
+}
+
+@media (max-width: 520px) {
+  .signup-demo { min-height: 650px; padding: 0.75rem; border-radius: 24px; }
+  .signup-phone { width: min(318px, 100%); height: 620px; border-radius: 24px; }
+  .signup-calendly-info { position: absolute; inset: 0 0 auto; width: 100%; height: 142px; padding: 16px; display: flex; flex-direction: column; align-items: center; text-align: center; }
+  .signup-calendly-info img { width: 52px; height: 52px; }
+  .signup-calendly-info > span { margin: 0.55rem 0 0; font-size: 0.58rem; }
+  .signup-calendly-info > strong { margin: 0.15rem 0 0; font-size: 0.9rem; line-height: 1.12; }
+  .signup-calendly-info > small { display: none; }
+  .signup-phone-bar { top: 142px; width: 100%; height: 58px; padding: 0 16px; }
+  .signup-phone-bar strong { font-size: 0.8rem; }
+  .signup-phone-bar span { font-size: 0.55rem; }
+  .signup-screen { inset: 200px 0 0; padding: 17px 15px; }
+  .signup-screen h3 { font-size: 1rem; }
+  .signup-calendar { padding: 0.75rem; }
+  .signup-calendar-days { gap: 0.32rem; }
+  .signup-calendar-days i { min-height: 25px; font-size: 0.64rem; }
+  .signup-screen button,
+  .signup-screen label { min-height: 46px; padding: 0.65rem 0.75rem; }
+  .signup-next { min-height: 44px; padding: 0.65rem 0.8rem; }
+  .signup-fields { gap: 6px; }
+
+  .inscription-page .calendly-placeholder {
+    height: auto;
+    min-height: 360px;
+    padding: 2rem 1.15rem;
+  }
+  .inscription-page .calendly-placeholder-note { max-width: 19rem; }
+  .inscription-page .calendly-fallback { text-align: center; padding-bottom: 1rem; }
+}
+
+@media (max-width: 640px) {
+  .inscription-page .mobile-cta-bar { display: none; }
+  .inscription-page main,
+  .inscription-page .site-footer { padding-bottom: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .signup-screen { animation: none; opacity: 0; transform: none; }
+  .signup-screen-one { opacity: 1; }
+}

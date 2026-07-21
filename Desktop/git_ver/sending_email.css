@@ -1,0 +1,104 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(128, 107, 167);
+    padding: 30px;
+    color: black;
+    font-weight: bold;
+}
+
+.total_part_1, .total_part_2{
+    background-color: aliceblue;
+    border-radius: 10px;
+    padding: 15px;
+    width: 100%;
+    max-width: 720px;
+    margin: 0px auto 15px;
+}
+
+.titre p {
+    font-size: 20px;
+    font-style: italic;
+    text-align: center;
+}
+
+.part_iden {
+    background-color: aliceblue;
+    padding: 10px;  
+    margin-bottom: 10px;
+}
+
+.part_iden label,
+.total_part_2 label {
+    display:block;
+    color: black;
+    text-align: left;
+    padding: 10px;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 10px;
+}
+
+.part_iden input,
+.total_part_2 input {
+    width: 100%;
+    padding: 10px 10px;
+    border: none;
+    font-size: 14px;
+    box-sizing: border-box;
+
+}
+
+.envoi_complete {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 720px;
+    margin: 0 auto;
+    border: 1.5px solid black;
+    padding: 15px;
+    background-color: aliceblue;
+    border-radius: 10px;
+}
+
+
+.envoi {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    border-color: red;
+}
+
+.envoi button {
+    flex: 1;
+    background-color: orange;
+    text-align: center;
+    border-radius: 10px;
+    padding: 8px 15px;
+    cursor: pointer;
+}
+
+.envoi button:hover {
+    background-color: white;
+    font-weight: bold;
+}
+.envoi-tout {
+    text-align: center;
+
+}
+
+.envoi-tout button {
+    padding: 10px 10px;
+    text-align: center;
+    border-radius: 10px;
+    background-color: aqua;
+    width: 100%;
+}
+
+.envoi-tout button:hover {
+    background-color: white;
+    color: black;
+    font-weight: bold;
+}
+
+
+

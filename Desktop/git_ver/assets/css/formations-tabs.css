@@ -1,0 +1,169 @@
+/* Category tabs: one focused set of offers at a time. */
+.formations-catalog {
+  padding-top: 0 !important;
+}
+
+.category-block[hidden] {
+  display: none !important;
+}
+
+.category-nav {
+  margin-bottom: clamp(2rem, 4vw, 3rem);
+}
+
+.category-nav a {
+  cursor: pointer;
+  user-select: none;
+}
+
+.category-nav a:focus-visible {
+  outline: 3px solid rgba(37, 99, 235, 0.28);
+  outline-offset: 3px;
+}
+
+.category-block {
+  margin-bottom: clamp(2.5rem, 5vw, 4rem);
+}
+
+.category-block .formula-grid--trio {
+  align-items: stretch;
+}
+
+.category-block .formula-card {
+  min-width: 0;
+  height: 100%;
+}
+
+.category-block .carousel-arrow {
+  display: none;
+}
+
+/* Accelerated plans: a clearly different premium blue treatment. */
+.category-block .formula-card.featured-formula {
+  background: linear-gradient(145deg, #173f9f 0%, #2563eb 100%);
+  color: #fff;
+  border-color: #2563eb;
+  box-shadow: 0 24px 42px -20px rgba(37, 99, 235, 0.7);
+}
+
+.category-block .formula-card.featured-formula:hover {
+  box-shadow: 0 28px 48px -20px rgba(37, 99, 235, 0.75);
+}
+
+.category-block .formula-card.featured-formula .formula-type,
+.category-block .formula-card.featured-formula > p,
+.category-block .formula-card.featured-formula .formula-price .price-label {
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.category-block .formula-card.featured-formula .formula-type i {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.16);
+}
+
+.category-block .formula-card.featured-formula .formula-price {
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.category-block .formula-card.featured-formula .formula-price .price-amount {
+  color: #fff;
+}
+
+.category-block .formula-card.featured-formula ul li::before {
+  color: #173f9f;
+  background: #fff;
+}
+
+.category-block .formula-card.featured-formula .btn.primary {
+  background: #22c55e;
+  border-color: #22c55e;
+  color: #0b2515;
+}
+
+@media (max-width: 900px) {
+  .category-block .formula-grid--trio {
+    grid-template-columns: 1fr;
+    max-width: 34rem;
+    gap: 1.6rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .section.compact {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .section.compact > .section-head {
+    margin-bottom: 1.5rem;
+  }
+
+  .section.compact > .section-head h2 {
+    font-size: clamp(1.65rem, 8vw, 2rem);
+    line-height: 1.12;
+  }
+
+  .category-nav {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: 100%;
+    overflow: visible;
+    border-radius: 20px;
+    gap: 0.35rem;
+    padding: 0.4rem;
+  }
+
+  .category-nav a {
+    width: 100%;
+    justify-content: center;
+    padding: 0.72rem 0.6rem;
+    font-size: 0.82rem;
+    scroll-snap-align: none;
+  }
+
+  .category-block .category-title {
+    margin-bottom: 1.35rem;
+    font-size: 1.2rem;
+  }
+
+  .category-block .formula-grid,
+  .category-block .formula-grid--trio,
+  .category-block .formula-grid--solo {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+    max-width: 32rem;
+    overflow: visible;
+    gap: 1.6rem;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  .category-block .formula-grid .formula-card,
+  .category-block .formula-grid--trio .formula-card {
+    flex: none;
+    width: 100%;
+    padding: 1.5rem;
+    border-radius: 20px;
+  }
+
+  .category-block .formula-card:hover,
+  .category-block .formula-card:active {
+    transform: none;
+  }
+
+  .category-block .formula-badge {
+    right: 1rem;
+  }
+
+  .category-block .formula-card .btn {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .category-nav a,
+  .category-block .formula-card {
+    transition: none;
+  }
+}

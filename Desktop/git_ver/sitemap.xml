@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- TODO: remplacer DOMAINE par le domaine définitif -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://DOMAINE/index.html</loc></url>
+  <url><loc>https://DOMAINE/formations.html</loc></url>
+  <url><loc>https://DOMAINE/resultats.html</loc></url>
+  <url><loc>https://DOMAINE/galerie.html</loc></url>
+  <url><loc>https://DOMAINE/contact.html</loc></url>
+  <url><loc>https://DOMAINE/inscription.html</loc></url>
+</urlset>
