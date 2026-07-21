@@ -58,10 +58,10 @@
   .hero-proof {
     right: 0.75rem;
     bottom: -1.35rem;
-    width: min(13.25rem, calc(100% - 2.25rem));
+    width: min(11.75rem, calc(100% - 2.25rem));
     max-width: calc(100% - 2.25rem);
-    padding: 0.55rem 0.8rem;
-    border-radius: 16px;
+    padding: 0.45rem 0.65rem;
+    border-radius: 14px;
   }
 
   .hero-proof-title,
@@ -69,8 +69,22 @@
     white-space: normal;
   }
 
+  .hero-proof-title {
+    font-size: 0.82rem;
+  }
+
+  .hero-proof-rating {
+    font-size: 0.7rem;
+  }
+
   .hero-proof-avatars {
-    margin-bottom: 0.25rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .hero-proof-avatars img {
+    width: 21px;
+    height: 21px;
+    margin-left: -7px;
   }
 
   .formula-section .section-head {
