@@ -94,6 +94,62 @@
     text-transform: none;
   }
 
+  .formula-section .formula-grid {
+    width: min(84vw, 21.5rem) !important;
+    margin-right: auto !important;
+    margin-left: auto !important;
+    padding: 0.85rem 0 0 !important;
+    gap: 0.75rem !important;
+  }
+
+  .formula-section .formula-grid .formula-card {
+    flex: 0 0 100% !important;
+    min-height: 0 !important;
+    gap: 0.7rem;
+    padding: 2.15rem 1.25rem 1.25rem !important;
+    border-radius: 22px !important;
+    scroll-snap-align: center;
+    overflow: visible;
+  }
+
+  .formula-section .formula-badge {
+    top: 0.6rem;
+    left: 50%;
+    max-width: calc(100% - 2rem);
+    transform: translateX(-50%);
+    white-space: nowrap;
+  }
+
+  .formula-section .formula-card h3 {
+    font-size: 1.08rem !important;
+    line-height: 1.2;
+  }
+
+  .formula-section .formula-price {
+    margin: 0.35rem 0 !important;
+    padding-top: 0.65rem;
+    font-size: 1.75rem !important;
+    line-height: 1.05;
+  }
+
+  .formula-section .formula-card > p:not(.formula-price),
+  .formula-section .formula-card li {
+    font-size: 0.82rem !important;
+    line-height: 1.4 !important;
+  }
+
+  .formula-section .formula-card ul {
+    gap: 0.4rem;
+    margin: 0.35rem 0 !important;
+  }
+
+  .formula-section .formula-card .btn {
+    min-height: 44px;
+    margin-top: 0.35rem;
+    padding: 0.68rem 1rem;
+    font-size: 0.84rem;
+  }
+
   .project-contact {
     padding-top: 2.75rem;
     gap: 1.5rem;
