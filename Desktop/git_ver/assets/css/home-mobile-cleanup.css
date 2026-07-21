@@ -1,0 +1,48 @@
+/* Home page: compact mobile hierarchy without changing the desktop composition. */
+.project-mobile-actions {
+  display: none;
+}
+
+@media (max-width: 640px) {
+  .formula-section .section-head {
+    max-width: none;
+    margin: 0 auto 1.75rem;
+    text-align: center;
+  }
+
+  .formula-section .section-head h2 {
+    display: none;
+  }
+
+  .formula-section .section-head .eyebrow {
+    margin: 0;
+    color: var(--ink-text);
+    font-family: var(--font-display);
+    font-size: clamp(1.5rem, 7vw, 1.85rem);
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    text-transform: none;
+  }
+
+  .ready-cta {
+    display: none;
+  }
+
+  .project-contact {
+    padding-top: 2.75rem;
+    gap: 1.5rem;
+  }
+
+  .project-mobile-actions {
+    display: grid;
+    grid-column: 1 / -1;
+    gap: 0.75rem;
+    width: 100%;
+    margin-top: 0.25rem;
+  }
+
+  .project-mobile-actions .btn {
+    width: 100%;
+  }
+}
