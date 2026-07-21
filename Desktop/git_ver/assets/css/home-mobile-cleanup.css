@@ -174,21 +174,38 @@
   }
 
   .process-route {
-    width: min(100%, 20rem);
-    margin-inline: auto !important;
+    width: 100vw;
+    margin-left: calc(50% - 50vw) !important;
+    margin-right: calc(50% - 50vw) !important;
   }
 
   .process-list {
+    --mobile-process-card: min(64vw, 15.5rem);
+    position: relative;
     width: 100%;
-    gap: 1.35rem !important;
+    gap: 1rem !important;
+  }
+
+  .process-list::before {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    top: 1rem;
+    bottom: 1rem;
+    left: 1.15rem;
+    width: 3px;
+    border-radius: 999px;
+    background: #2867e8;
   }
 
   .process-card {
-    width: min(82vw, 19rem);
+    z-index: 1;
+    width: var(--mobile-process-card);
     min-height: 0 !important;
     margin: 0 auto !important;
-    padding: 1.5rem 1rem 1.05rem !important;
+    padding: 1.25rem 0.85rem 1rem !important;
     border-radius: 18px !important;
+    text-align: center;
   }
 
   .process-card::before {
@@ -196,10 +213,13 @@
   }
 
   .process-number {
-    top: -0.8rem !important;
+    top: 50% !important;
+    left: calc((var(--mobile-process-card) - 100vw) / 2 + 1.15rem) !important;
     width: 1.8rem !important;
     height: 1.8rem !important;
+    transform: translate(-50%, -50%) !important;
     font-size: 0.75rem !important;
+    box-shadow: 0 0 0 5px #fff;
   }
 
   .process-icon-wrapper {
@@ -220,6 +240,7 @@
 
   .process-card p {
     max-width: 15rem;
+    margin-inline: auto !important;
     margin-top: 0.35rem !important;
     font-size: 0.72rem !important;
     line-height: 1.4 !important;
