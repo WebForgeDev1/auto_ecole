@@ -150,6 +150,71 @@
     font-size: 0.84rem;
   }
 
+  .process-section {
+    padding: 2.75rem 1rem 2.25rem !important;
+  }
+
+  .process-heading {
+    width: min(100%, 22rem);
+    margin: 0 auto 1.35rem !important;
+  }
+
+  .process-route {
+    width: min(100%, 20rem);
+    margin-inline: auto !important;
+  }
+
+  .process-list {
+    width: 100%;
+    gap: 1.35rem !important;
+  }
+
+  .process-card {
+    width: min(82vw, 19rem);
+    min-height: 0 !important;
+    margin: 0 auto !important;
+    padding: 1.5rem 1rem 1.05rem !important;
+    border-radius: 18px !important;
+  }
+
+  .process-card::before {
+    display: none !important;
+  }
+
+  .process-number {
+    top: -0.8rem !important;
+    width: 1.8rem !important;
+    height: 1.8rem !important;
+    font-size: 0.75rem !important;
+  }
+
+  .process-icon-wrapper {
+    width: 3.8rem !important;
+    height: 3.8rem !important;
+    margin-bottom: 0.45rem !important;
+  }
+
+  .process-icon {
+    width: 3.8rem !important;
+    height: 3.8rem !important;
+  }
+
+  .process-card h3 {
+    font-size: 0.92rem !important;
+    line-height: 1.2;
+  }
+
+  .process-card p {
+    max-width: 15rem;
+    margin-top: 0.35rem !important;
+    font-size: 0.72rem !important;
+    line-height: 1.4 !important;
+  }
+
+  .process-action {
+    margin-top: 1.35rem !important;
+  }
+
   .project-contact {
     padding-top: 2.75rem;
     gap: 1.5rem;
