@@ -229,6 +229,40 @@
     margin-top: 1.35rem !important;
   }
 
+  .team-section {
+    padding-top: 2.75rem !important;
+  }
+
+  .team-section .section-head {
+    width: min(100%, 22rem);
+    margin: 0 auto 1.4rem !important;
+  }
+
+  .team-section .section-head h2 {
+    max-width: 19rem;
+    margin-inline: auto;
+    font-size: clamp(1.55rem, 6.6vw, 1.8rem) !important;
+    line-height: 1.12 !important;
+    letter-spacing: -0.025em;
+  }
+
+  .faq-section .faq-layout {
+    gap: 1.35rem;
+  }
+
+  .faq-section .faq-side,
+  .faq-section .faq-head {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    text-align: center;
+  }
+
+  .faq-section .faq-head h2 {
+    font-size: clamp(1.7rem, 8vw, 2rem) !important;
+    line-height: 1.08 !important;
+  }
+
   .project-contact {
     padding-top: 2.75rem;
     gap: 1.5rem;
