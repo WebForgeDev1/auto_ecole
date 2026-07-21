@@ -7,6 +7,72 @@
 }
 
 @media (max-width: 640px) {
+  .hero {
+    padding-top: calc(var(--header-h) + 1rem);
+    padding-right: 1rem;
+    padding-bottom: 3rem;
+    padding-left: 1rem;
+  }
+
+  .hero-visual {
+    height: clamp(490px, 67svh, 560px);
+    min-height: 0;
+    aspect-ratio: auto;
+    padding: 1.4rem;
+    padding-bottom: 4.6rem;
+    border-radius: 26px;
+  }
+
+  .hero-media img {
+    object-position: 38% 55% !important;
+  }
+
+  .hero-content {
+    width: min(100%, 20rem) !important;
+    max-width: calc(100vw - 4.8rem) !important;
+  }
+
+  .hero-content h1 {
+    font-size: clamp(2rem, 9.5vw, 2.65rem) !important;
+    line-height: 1.02;
+  }
+
+  .hero-text {
+    margin-top: 0.8rem;
+    font-size: 0.94rem !important;
+    line-height: 1.42;
+  }
+
+  .hero-actions {
+    gap: 0.55rem;
+    margin-top: 1rem;
+  }
+
+  .hero-actions .btn {
+    width: auto;
+    min-height: 46px;
+    padding: 0.7rem 1.15rem;
+    font-size: 0.9rem;
+  }
+
+  .hero-proof {
+    right: 0.75rem;
+    bottom: -1.35rem;
+    width: min(13.25rem, calc(100% - 2.25rem));
+    max-width: calc(100% - 2.25rem);
+    padding: 0.55rem 0.8rem;
+    border-radius: 16px;
+  }
+
+  .hero-proof-title,
+  .hero-proof-rating {
+    white-space: normal;
+  }
+
+  .hero-proof-avatars {
+    margin-bottom: 0.25rem;
+  }
+
   .formula-section .section-head {
     max-width: none;
     margin: 0 auto 1.75rem;
