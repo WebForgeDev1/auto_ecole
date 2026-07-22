@@ -1,0 +1,458 @@
+/* Mobile layout corrections. Desktop presentation is intentionally unchanged. */
+html {
+  scroll-padding-top: calc(var(--header-h, 76px) + 1rem);
+}
+
+section[id],
+.category-block {
+  scroll-margin-top: calc(var(--header-h, 76px) + 1rem);
+}
+
+@media (max-width: 640px) {
+  .hero {
+    padding-inline: 1rem !important;
+    overflow: hidden;
+  }
+
+  .hero-card,
+  .hero-visual {
+    width: auto !important;
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .hero-card {
+    margin-inline: 0 !important;
+  }
+
+  .hero-content {
+    width: min(100%, 19rem) !important;
+    min-width: 0;
+    max-width: calc(100vw - 5rem) !important;
+  }
+
+  .hero-content h1,
+  .hero-text {
+    width: 100%;
+    max-width: 100%;
+    text-wrap: wrap !important;
+    overflow-wrap: anywhere;
+  }
+
+  .hero-content h1 {
+    font-size: clamp(1.72rem, 7.5vw, 2.05rem) !important;
+    line-height: 1.08;
+  }
+
+  .hero-text {
+    font-size: .94rem !important;
+    line-height: 1.5;
+  }
+
+  .hero-actions {
+    max-width: 100%;
+  }
+
+  .hero-actions .btn {
+    max-width: 100%;
+    white-space: normal;
+    text-align: center;
+  }
+
+  /* Prevent headings and sections from being hidden by the sticky navigation. */
+  .page-main {
+    overflow: clip;
+  }
+
+  .section,
+  .formula-section,
+  .team-section,
+  .google-proof-section,
+  .reviews-section,
+  .method-section {
+    min-height: 0 !important;
+  }
+
+  .section-head {
+    max-width: 100%;
+    margin-bottom: 1.5rem !important;
+  }
+
+  .section-head h2 {
+    max-width: 100%;
+    font-size: clamp(1.75rem, 8.5vw, 2.35rem) !important;
+    line-height: 1.08 !important;
+    overflow-wrap: anywhere;
+  }
+
+  /* One complete card per view. No clipped neighbour and no active-card zoom. */
+  .formula-section .formula-grid,
+  .team-section .team-grid,
+  .reviews-section .review-grid-static,
+  .google-proof-section .review-grid-static {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-inline: 0 !important;
+    gap: 12px !important;
+    scroll-padding-inline: 0;
+  }
+
+  .formula-section .formula-grid .formula-card,
+  .team-section .team-grid .team-card,
+  .reviews-section .review-grid-static .google-review-card,
+  .google-proof-section .review-grid-static .google-review-card {
+    flex: 0 0 100% !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    scroll-snap-align: start !important;
+    opacity: 1 !important;
+    transform: none !important;
+    overflow-wrap: anywhere;
+  }
+
+  /* Put carousel controls below content so they never cover text or images. */
+  .formula-section .carousel-wrap,
+  .team-section .carousel-wrap,
+  .reviews-section .carousel-wrap,
+  .google-proof-section .carousel-wrap {
+    padding-bottom: 4.5rem;
+  }
+
+  .formula-section .carousel-arrow,
+  .team-section .carousel-arrow,
+  .reviews-section .carousel-arrow,
+  .google-proof-section .carousel-arrow {
+    top: auto !important;
+    bottom: 0.25rem;
+    width: 48px;
+    height: 48px;
+    transform: none !important;
+  }
+
+  .formula-section .carousel-arrow.prev,
+  .team-section .carousel-arrow.prev,
+  .reviews-section .carousel-arrow.prev,
+  .google-proof-section .carousel-arrow.prev {
+    left: calc(50% - 58px) !important;
+  }
+
+  .formula-section .carousel-arrow.next,
+  .team-section .carousel-arrow.next,
+  .reviews-section .carousel-arrow.next,
+  .google-proof-section .carousel-arrow.next {
+    right: calc(50% - 58px) !important;
+  }
+
+  .formula-section .carousel-arrow:active,
+  .team-section .carousel-arrow:active,
+  .reviews-section .carousel-arrow:active,
+  .google-proof-section .carousel-arrow:active {
+    transform: scale(.94) !important;
+  }
+
+  .carousel-dots {
+    margin-top: .75rem !important;
+  }
+
+  /* Pricing cards: retain hierarchy without occupying almost a full phone page. */
+  .formula-section .formula-card {
+    min-height: 0 !important;
+    padding: 1.35rem !important;
+    border-radius: 22px !important;
+    overflow: visible;
+  }
+
+  .formula-section .formula-card h3 {
+    font-size: 1.2rem !important;
+    line-height: 1.2;
+  }
+
+  .formula-section .formula-price {
+    font-size: 2.15rem !important;
+    line-height: 1.05;
+    margin-block: 1rem !important;
+  }
+
+  .formula-section .formula-card > p:not(.formula-price),
+  .formula-section .formula-card li {
+    font-size: .92rem !important;
+    line-height: 1.45 !important;
+  }
+
+  .formula-section .formula-card ul {
+    margin-block: 1rem !important;
+  }
+
+  .formula-section .formula-card .btn {
+    width: 100%;
+    min-height: 48px;
+    white-space: normal;
+    text-align: center;
+  }
+
+  .formula-badge {
+    max-width: calc(100% - 2rem);
+    font-size: .68rem !important;
+  }
+
+  .financing-banner {
+    margin-top: 1.25rem !important;
+    padding: .9rem 1rem !important;
+    border-radius: 20px !important;
+    font-size: .88rem !important;
+  }
+
+  /* Team cards fit within the viewport and remain readable. */
+  .team-section .team-card {
+    min-height: 0 !important;
+    padding: 1.25rem 1rem 1.4rem !important;
+  }
+
+  .team-section .team-photo {
+    width: 118px !important;
+    height: 118px !important;
+  }
+
+  .team-section .team-card h3 {
+    font-size: 1.2rem !important;
+  }
+
+  .team-section .team-role {
+    font-size: .9rem !important;
+    line-height: 1.4;
+  }
+
+  /* Reviews: compact cards and remove the large empty vertical gaps. */
+  .reviews-section,
+  .google-proof-section {
+    padding-top: 2.75rem !important;
+    padding-bottom: 2.75rem !important;
+  }
+
+  .reviews-section .google-review-card,
+  .google-proof-section .google-review-card {
+    min-height: 0 !important;
+    padding: 1.25rem !important;
+  }
+
+  .reviews-section .google-review-card blockquote,
+  .google-proof-section .google-review-card blockquote {
+    font-size: .94rem !important;
+    line-height: 1.5 !important;
+  }
+
+  .resultats-page .success-loop {
+    margin-bottom: 0 !important;
+  }
+
+  .resultats-page .method-section,
+  .resultats-page .reviews-section {
+    padding-block: 2.75rem !important;
+  }
+
+  .resultats-page .feature-grid {
+    gap: 1rem !important;
+  }
+
+  /* The comparison remains complete and is deliberately scrollable on phones. */
+  .comparison-table-wrap {
+    width: calc(100% + 2rem);
+    margin-left: -1rem !important;
+    margin-right: -1rem !important;
+    padding: 0 1rem .75rem;
+    border-block: 1px solid var(--line-light);
+    background: #fff;
+    overscroll-behavior-inline: contain;
+  }
+
+  .comparison-table {
+    min-width: 570px !important;
+    font-size: .8rem !important;
+  }
+
+  .comparison-table caption {
+    position: sticky;
+    left: 0;
+    width: calc(100vw - 2rem);
+    padding-top: 1rem;
+    font-size: .8rem !important;
+  }
+
+  .comparison-table th,
+  .comparison-table td {
+    padding: .75rem .65rem !important;
+  }
+
+  .comparison-table tbody th {
+    min-width: 175px;
+  }
+
+  .comparison-table-wrap::after {
+    content: "Glissez pour comparer →" !important;
+    position: sticky !important;
+    display: block;
+    left: 1rem !important;
+    bottom: 0 !important;
+    width: max-content !important;
+    height: auto !important;
+    margin-top: .7rem;
+    padding: .4rem .7rem;
+    border-radius: 999px;
+    color: var(--ink-text-dim);
+    background: var(--panel) !important;
+    font-size: .72rem;
+    pointer-events: none;
+  }
+
+  .trust-bar {
+    margin-top: 1.75rem !important;
+    padding: 1.25rem !important;
+    border-radius: 20px !important;
+  }
+}
+
+@media (max-width: 390px) {
+  .section-head h2 {
+    font-size: 1.72rem !important;
+  }
+
+  .formula-section .formula-card,
+  .reviews-section .google-review-card,
+  .google-proof-section .google-review-card {
+    padding: 1.15rem !important;
+  }
+}
+
+/* Mobile presentation inspired by the supplied reference: vertical journey and
+   focused, single-card carousels. */
+@media (max-width: 560px) {
+  .process-section {
+    padding: 2.75rem .85rem 2.25rem !important;
+  }
+
+  .process-heading {
+    margin: 0 auto 1.55rem !important;
+    width: min(100%, 21rem);
+  }
+
+  .process-route {
+    width: 100%;
+    max-width: 28rem;
+    margin: 0 auto !important;
+    padding: 0 0 0 3.35rem !important;
+  }
+
+  .process-list {
+    position: relative;
+    display: flex !important;
+    flex-direction: column;
+    gap: 1.15rem !important;
+  }
+
+  .process-list::before {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    top: 1.5rem;
+    bottom: 1.5rem;
+    left: -1.95rem;
+    width: 3px;
+    border-radius: 999px;
+    background: #2563eb;
+  }
+
+  .process-card {
+    z-index: 1;
+    width: 100%;
+    min-height: 0 !important;
+    margin: 0 !important;
+    padding: 1.25rem 1rem 1.1rem !important;
+    border-radius: 18px !important;
+    overflow-wrap: anywhere;
+  }
+
+  .process-card::before {
+    display: none !important;
+  }
+
+  .process-number {
+    top: 50% !important;
+    left: -1.95rem !important;
+    width: 40px !important;
+    height: 40px !important;
+    transform: translate(-50%, -50%) !important;
+    box-shadow: 0 0 0 8px #fff !important;
+    font-size: .9rem !important;
+  }
+
+  .process-icon-wrapper {
+    width: 76px !important;
+    height: 76px !important;
+    margin-bottom: .65rem !important;
+  }
+
+  .process-icon {
+    width: 76px !important;
+    height: 76px !important;
+  }
+
+  .process-card h3 {
+    font-size: 1rem !important;
+    line-height: 1.2;
+  }
+
+  .process-card p {
+    max-width: 16rem;
+    margin-top: .45rem !important;
+    font-size: .78rem !important;
+    line-height: 1.42 !important;
+  }
+
+  .process-action {
+    margin-top: 2rem !important;
+  }
+
+  .process-action a {
+    min-height: 46px;
+    padding: .7rem 1.4rem;
+    font-size: .88rem;
+  }
+
+  /* Course cards use lateral controls like the reference, but the controls sit
+     in the card margins rather than over text. */
+  .formula-section .carousel-wrap {
+    padding-bottom: 0 !important;
+    padding-inline: .65rem;
+  }
+
+  .formula-section .formula-grid {
+    width: calc(100% - 1.7rem) !important;
+    margin-inline: auto !important;
+  }
+
+  .formula-section .formula-card {
+    padding-inline: 1.6rem !important;
+  }
+
+  .formula-section .carousel-arrow {
+    top: 50% !important;
+    bottom: auto !important;
+    width: 46px;
+    height: 46px;
+    transform: translateY(-50%) !important;
+  }
+
+  .formula-section .carousel-arrow.prev {
+    left: -4px !important;
+  }
+
+  .formula-section .carousel-arrow.next {
+    right: -4px !important;
+  }
+
+  .formula-section .carousel-arrow:active {
+    transform: translateY(-50%) scale(.94) !important;
+  }
+}

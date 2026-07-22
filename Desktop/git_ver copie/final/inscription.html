@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Choisir une formule | HK Auto École Le Mans</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.hugeicons.com/font/icons.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="promax.css">
+</head>
+<body>
+  <header class="site-header inner-header is-scrolled" data-header>
+    <a class="brand" href="index.html"><span class="brand-mark">HK</span><span><strong>HK Auto École</strong><small>Le Mans</small></span></a>
+    <button class="nav-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false" data-nav-toggle><span></span><span></span><span></span></button>
+    <nav class="main-nav" data-nav>
+      <a href="index.html">Accueil</a>
+      <a href="formations.html">Formations</a>
+      <a href="resultats.html">Resultats</a>
+      <a href="galerie.html">Galerie</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <a class="header-cta" href="contact.html">Contact</a>
+  </header>
+
+  <main class="page-main">
+    <section class="page-hero">
+      <p class="eyebrow">Inscription</p>
+      <h1>Choisissez votre formule et envoyez votre demande.</h1>
+      <p>Cette page rassemble les informations nécessaires pour préparer votre rendez-vous avec HK Auto École Le Mans.</p>
+    </section>
+
+    <section class="application-layout">
+      <aside class="selected-plan">
+        <p class="eyebrow">Formule sélectionnée</p>
+        <span class="icon-badge"><i class="hgi-stroke hgi-task-done-01" aria-hidden="true"></i></span>
+        <h2 data-selected-title>À choisir</h2>
+        <p data-selected-description>Sélectionnez une formule depuis l'accueil ou choisissez-la dans le formulaire.</p>
+        <div class="selected-price" data-selected-price>Tarif à confirmer</div>
+        <ul>
+          <li>Évaluation de départ</li>
+          <li>Conseil sur le volume d'heures</li>
+          <li>Préparation administrative</li>
+          <li>Rendez-vous avec l'équipe</li>
+        </ul>
+      </aside>
+
+      <form class="contact-card application-form" action="#" method="post" data-contact-form>
+        <p class="eyebrow">Votre projet</p>
+        <span class="icon-badge"><i class="hgi-stroke hgi-calendar-add-01" aria-hidden="true"></i></span>
+        <h2>Demande de rendez-vous</h2>
+        <div class="form-row">
+          <label>Nom complet<input type="text" name="name" placeholder="Votre nom" required></label>
+          <label>Téléphone<input type="tel" name="phone" placeholder="Votre numéro" required></label>
+        </div>
+        <div class="form-row">
+          <label>Email<input type="email" name="email" placeholder="nom@email.fr"></label>
+          <label>Disponibilité<input type="text" name="availability" placeholder="Matin, soir, samedi..."></label>
+        </div>
+        <label>Formule souhaitée
+          <select name="project" data-plan-select required>
+            <option value="">Choisir une formule</option>
+            <option value="manuel-classique">Permis B manuel classique</option>
+            <option value="manuel-accelere">Permis B manuel accéléré</option>
+            <option value="auto-classique">Boîte automatique classique</option>
+            <option value="auto-accelere">Boîte automatique accélérée</option>
+          </select>
+        </label>
+        <label>Niveau actuel
+          <select name="level">
+            <option>Débutant</option>
+            <option>Code déjà obtenu</option>
+            <option>Déjà conduit auparavant</option>
+            <option>Besoin de remise à niveau</option>
+          </select>
+        </label>
+        <label>Message<textarea name="message" rows="5" placeholder="Votre objectif, votre date souhaitée, vos contraintes de planning..."></textarea></label>
+        <button class="btn primary" type="submit">Envoyer ma demande</button>
+        <p class="form-note" data-form-note>Votre demande sera préparée pour HK Auto École.</p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div><strong>HK Auto École Le Mans</strong><p>Le Mans · Sarthe · Contact via formulaire</p></div><nav><a href="formations.html">Formations</a><a href="resultats.html">Resultats</a><a href="galerie.html">Galerie</a><a href="contact.html">Contact</a></nav></footer>
+  <script src="script.js"></script>
+</body>
+</html>

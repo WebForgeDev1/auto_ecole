@@ -1,0 +1,303 @@
+/* Home page: compact mobile hierarchy without changing the desktop composition. */
+.project-contact-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 2rem;
+}
+
+@media (max-width: 640px) {
+  .hero {
+    padding-top: calc(var(--header-h) + 1rem);
+    padding-right: 1rem;
+    padding-bottom: 3rem;
+    padding-left: 1rem;
+  }
+
+  .hero-visual {
+    height: clamp(490px, 67svh, 560px);
+    min-height: 0;
+    aspect-ratio: auto;
+    padding: 1.4rem;
+    padding-bottom: 4.6rem;
+    border-radius: 26px;
+  }
+
+  .hero-media img {
+    object-position: 38% 55% !important;
+  }
+
+  .hero-content {
+    width: min(100%, 20rem) !important;
+    max-width: calc(100vw - 4.8rem) !important;
+  }
+
+  .hero-content h1 {
+    font-size: clamp(2rem, 9.5vw, 2.65rem) !important;
+    line-height: 1.02;
+  }
+
+  .hero-text {
+    margin-top: 0.8rem;
+    font-size: 0.94rem !important;
+    line-height: 1.42;
+  }
+
+  .hero-actions {
+    gap: 0.55rem;
+    margin-top: 1rem;
+  }
+
+  .hero-actions .btn {
+    width: auto;
+    min-height: 46px;
+    padding: 0.7rem 1.15rem;
+    font-size: 0.9rem;
+  }
+
+  .hero-proof {
+    right: 0.75rem;
+    bottom: -1.35rem;
+    width: min(11.75rem, calc(100% - 2.25rem));
+    max-width: calc(100% - 2.25rem);
+    padding: 0.45rem 0.65rem;
+    border-radius: 14px;
+  }
+
+  .hero-proof-title,
+  .hero-proof-rating {
+    white-space: normal;
+  }
+
+  .hero-proof-title {
+    font-size: 0.82rem;
+  }
+
+  .hero-proof-rating {
+    font-size: 0.7rem;
+  }
+
+  .hero-proof-avatars {
+    margin-bottom: 0.2rem;
+  }
+
+  .hero-proof-avatars img {
+    width: 21px;
+    height: 21px;
+    margin-left: -7px;
+  }
+
+  .formula-section .section-head {
+    max-width: none;
+    margin: 0 auto 1.75rem;
+    text-align: center;
+  }
+
+  .formula-section .section-head h2 {
+    display: none;
+  }
+
+  .formula-section .section-head .eyebrow {
+    margin: 0;
+    color: var(--ink-text);
+    font-family: var(--font-display);
+    font-size: clamp(1.5rem, 7vw, 1.85rem);
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    text-transform: none;
+  }
+
+  .formula-section .formula-grid {
+    width: min(84vw, 21.5rem) !important;
+    margin-right: auto !important;
+    margin-left: auto !important;
+    padding: 0.85rem 0 0 !important;
+    gap: 0.75rem !important;
+  }
+
+  .formula-section .formula-grid .formula-card {
+    flex: 0 0 100% !important;
+    min-height: 0 !important;
+    gap: 0.7rem;
+    padding: 2.15rem 1.25rem 1.25rem !important;
+    border-radius: 22px !important;
+    scroll-snap-align: center;
+    overflow: visible;
+  }
+
+  .formula-section .formula-badge {
+    top: 0.6rem;
+    left: 50%;
+    max-width: calc(100% - 2rem);
+    transform: translateX(-50%);
+    white-space: nowrap;
+  }
+
+  .formula-section .formula-card h3 {
+    font-size: 1.08rem !important;
+    line-height: 1.2;
+  }
+
+  .formula-section .formula-price {
+    margin: 0.35rem 0 !important;
+    padding-top: 0.65rem;
+    font-size: 1.75rem !important;
+    line-height: 1.05;
+  }
+
+  .formula-section .formula-card > p:not(.formula-price),
+  .formula-section .formula-card li {
+    font-size: 0.82rem !important;
+    line-height: 1.4 !important;
+  }
+
+  .formula-section .formula-card ul {
+    gap: 0.4rem;
+    margin: 0.35rem 0 !important;
+  }
+
+  .formula-section .formula-card .btn {
+    min-height: 44px;
+    margin-top: 0.35rem;
+    padding: 0.68rem 1rem;
+    font-size: 0.84rem;
+  }
+
+  .process-section {
+    padding: 2.75rem 1rem 2.25rem !important;
+  }
+
+  .process-heading {
+    width: min(100%, 21rem);
+    margin: 0 auto 1.45rem !important;
+  }
+
+  .process-route {
+    width: 100%;
+    max-width: 28rem;
+    margin: 0 auto !important;
+    padding: 0 0 0 3.35rem !important;
+  }
+
+  .process-list {
+    --mobile-process-card: min(82vw, 18rem);
+    position: relative;
+    width: 100%;
+    gap: 1.1rem !important;
+  }
+
+  .process-list::before {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    top: 1.1rem;
+    bottom: 1.1rem;
+    left: -1.95rem;
+    width: 3px;
+    border-radius: 999px;
+    background: #2867e8;
+  }
+
+  .process-card {
+    z-index: 1;
+    width: var(--mobile-process-card);
+    min-height: 0 !important;
+    margin: 0 auto !important;
+    padding: 1.2rem .95rem 1.05rem !important;
+    border-radius: 18px !important;
+    text-align: center;
+  }
+
+  .process-card::before {
+    display: none !important;
+  }
+
+  .process-number {
+    top: 50% !important;
+    left: -1.95rem !important;
+    width: 2rem !important;
+    height: 2rem !important;
+    transform: translate(-50%, -50%) !important;
+    font-size: 0.8rem !important;
+    box-shadow: 0 0 0 5px #fff;
+  }
+
+  .process-icon-wrapper {
+    width: 3.1rem !important;
+    height: 3.1rem !important;
+    margin-bottom: 0.4rem !important;
+  }
+
+  .process-icon {
+    width: 3.1rem !important;
+    height: 3.1rem !important;
+  }
+
+  .process-card h3 {
+    font-size: 0.95rem !important;
+    line-height: 1.2;
+  }
+
+  .process-card p {
+    max-width: 15.5rem;
+    margin-inline: auto !important;
+    margin-top: 0.35rem !important;
+    font-size: 0.75rem !important;
+    line-height: 1.38 !important;
+  }
+
+  .process-action {
+    margin-top: 1.35rem !important;
+  }
+
+  .team-section {
+    padding-top: 2.75rem !important;
+  }
+
+  .team-section .section-head {
+    width: min(100%, 22rem);
+    margin: 0 auto 1.4rem !important;
+  }
+
+  .team-section .section-head h2 {
+    max-width: 19rem;
+    margin-inline: auto;
+    font-size: clamp(1.55rem, 6.6vw, 1.8rem) !important;
+    line-height: 1.12 !important;
+    letter-spacing: -0.025em;
+  }
+
+  .faq-section .faq-layout {
+    gap: 1.35rem;
+  }
+
+  .faq-section .faq-side,
+  .faq-section .faq-head {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    text-align: center;
+  }
+
+  .faq-section .faq-head h2 {
+    font-size: clamp(1.7rem, 8vw, 2rem) !important;
+    line-height: 1.08 !important;
+  }
+
+  .project-contact {
+    padding-top: 2.75rem;
+    gap: 1.5rem;
+  }
+
+  .project-contact-actions {
+    display: grid;
+    gap: 0.75rem;
+    width: 100%;
+    margin-top: 1.5rem;
+  }
+
+  .project-contact-actions .btn {
+    width: 100%;
+  }
+}

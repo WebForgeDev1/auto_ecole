@@ -1,0 +1,51 @@
+.resultats-page main.page-main {
+  display: flex;
+  flex-direction: column;
+}
+
+.resultats-page .success-loop {
+  order: 1;
+}
+
+.resultats-page .method-section {
+  order: 2;
+}
+
+.resultats-page .reviews-section {
+  order: 3;
+  padding-top: clamp(2rem, 4vw, 3rem);
+}
+
+.resultats-page .reviews-section .google-review-card.featured-review {
+  border-color: var(--line-dark);
+  box-shadow: none;
+}
+
+.resultats-page .reviews-section .review-stars {
+  color: #fabb05;
+}
+
+.resultats-page .ready-cta {
+  order: 4;
+}
+
+.success-loop {
+  margin-bottom: clamp(3rem, 6vw, 5rem);
+  background: linear-gradient(145deg, #173f9f 0%, #2563eb 100%);
+}
+
+.ready-cta {
+  width: calc(100% - 2 * clamp(1.25rem, 4vw, 3rem));
+  margin-bottom: clamp(3rem, 6vw, 5rem);
+}
+
+@media (max-width: 640px) {
+  .success-loop {
+    margin-bottom: 2.5rem;
+  }
+
+  .ready-cta {
+    width: calc(100% - 2rem);
+    margin-bottom: 2.5rem;
+  }
+}
