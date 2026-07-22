@@ -169,30 +169,31 @@
   }
 
   .process-heading {
-    width: min(100%, 22rem);
-    margin: 0 auto 1.35rem !important;
+    width: min(100%, 21rem);
+    margin: 0 auto 1.45rem !important;
   }
 
   .process-route {
-    width: 100vw;
-    margin-left: calc(50% - 50vw) !important;
-    margin-right: calc(50% - 50vw) !important;
+    width: 100%;
+    max-width: 28rem;
+    margin: 0 auto !important;
+    padding: 0 0 0 3.35rem !important;
   }
 
   .process-list {
-    --mobile-process-card: min(64vw, 15.5rem);
+    --mobile-process-card: min(82vw, 18rem);
     position: relative;
     width: 100%;
-    gap: 1rem !important;
+    gap: 1.1rem !important;
   }
 
   .process-list::before {
     content: "";
     position: absolute;
     z-index: 0;
-    top: 1rem;
-    bottom: 1rem;
-    left: 1.15rem;
+    top: 1.1rem;
+    bottom: 1.1rem;
+    left: -1.95rem;
     width: 3px;
     border-radius: 999px;
     background: #2867e8;
@@ -203,7 +204,7 @@
     width: var(--mobile-process-card);
     min-height: 0 !important;
     margin: 0 auto !important;
-    padding: 1.25rem 0.85rem 1rem !important;
+    padding: 1.2rem .95rem 1.05rem !important;
     border-radius: 18px !important;
     text-align: center;
   }
@@ -214,36 +215,36 @@
 
   .process-number {
     top: 50% !important;
-    left: calc((var(--mobile-process-card) - 100vw) / 2 + 1.15rem) !important;
-    width: 1.8rem !important;
-    height: 1.8rem !important;
+    left: -1.95rem !important;
+    width: 2rem !important;
+    height: 2rem !important;
     transform: translate(-50%, -50%) !important;
-    font-size: 0.75rem !important;
+    font-size: 0.8rem !important;
     box-shadow: 0 0 0 5px #fff;
   }
 
   .process-icon-wrapper {
-    width: 3.8rem !important;
-    height: 3.8rem !important;
-    margin-bottom: 0.45rem !important;
+    width: 3.1rem !important;
+    height: 3.1rem !important;
+    margin-bottom: 0.4rem !important;
   }
 
   .process-icon {
-    width: 3.8rem !important;
-    height: 3.8rem !important;
+    width: 3.1rem !important;
+    height: 3.1rem !important;
   }
 
   .process-card h3 {
-    font-size: 0.92rem !important;
+    font-size: 0.95rem !important;
     line-height: 1.2;
   }
 
   .process-card p {
-    max-width: 15rem;
+    max-width: 15.5rem;
     margin-inline: auto !important;
     margin-top: 0.35rem !important;
-    font-size: 0.72rem !important;
-    line-height: 1.4 !important;
+    font-size: 0.75rem !important;
+    line-height: 1.38 !important;
   }
 
   .process-action {
